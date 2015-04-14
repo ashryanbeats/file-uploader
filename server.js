@@ -6,9 +6,13 @@ var path		= require('path');
 
 app.use(logger('dev'));
 
-//app.use(express.static(__dirname + '/public'));
-app.use(express.static(path.join(__dirname, 'app')));
-//app.use(express.static('/bower_components', __dirname + '/bower_components'));
+var bowerPath = path.join(__dirname, './bower_components');
+var publicPath = path.join(__dirname, './public');
+var appPath = path.join(__dirname, './app');
+
+app.use(express.static(appPath));
+app.use(express.static(bowerPath));
+app.use(express.static(publicPath));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
