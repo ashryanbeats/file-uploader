@@ -23,4 +23,5 @@ gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('./app/assets/*.scss', ['sass']);
   gulp.watch('./app/views/*.html', ['reload']);
+  gulp.watch('./public/views/*.html', ['reload']);
 });

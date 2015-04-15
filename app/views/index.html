@@ -1,21 +1,23 @@
 <!doctype html>
-<html ng-app>
+<html>
 <head>
 	<title>File uploader</title>
 	<link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<script type="text/javascript" src="/angular/angular.js"></script>
+	<script type="text/javascript" src="/angular-ui-router/release/angular-ui-router.js"></script>
+	<script type="text/javascript" src="/js/app.js"></script>
 </head>
-<body>
+<body ng-app="routerApp">
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">File Uploader</a>
+				<a class="navbar-brand" ui-sref="home">File Uploader</a>
 			</div>
 		
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Upload</a></li>
-				<li><a href="#">About</a></li>
+				<li class="active"><a ui-sref="home">Upload</a></li>
+				<li><a ui-sref="about">About</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -23,29 +25,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
+				
+				<div ui-view></div>
 
-				<h2>Upload a file</h2>
-				<span class="input-group">
-					<span class="input-group-btn">
-						<span class="btn btn-primary btn-file">
-							Browse... <input type="file" multiple>
-						</span>
-					</span>
-					<input type="text" class="form-control" readonly>
-				</span>
-				<span class="help-block">
-					Press Browse and select the file you would like to upload.
-				</span>
-				<button type="submit" class="btn btn-primary">Upload file</button>
-
-				<h2>Success!</h2>
-				<p>Your upload has successfully completed. Nice work.</p>
-
-				<h2>Oh no!</h2>
-				<p>Your file didn't upload. Please try again.</p>
-
-				<h2>About</h2>
-				<p>This is a file uploader, made with ア! by <a href="http://ashryanbeats.com">Ash Ryan Beats</a>.
 			</div> <!-- end column -->
 
 
