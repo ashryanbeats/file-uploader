@@ -3,6 +3,7 @@
 <head>
 	<title>File uploader</title>
 	<link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<script type="text/javascript" src="/angular/angular.js"></script>
 </head>
 <body>
@@ -20,9 +21,35 @@
 	</nav>
 
 	<div class="container">
-		{{2+2}}
-		Hello world!
-	</div>
-	
+		<div class="row">
+			<div class="col-md-12">
+
+				<h2>Upload a file</h2>
+				<span class="input-group">
+					<span class="input-group-btn">
+						<span class="btn btn-primary btn-file">
+							Browse... <input type="file" multiple>
+						</span>
+					</span>
+					<input type="text" class="form-control" readonly>
+				</span>
+				<span class="help-block">
+					Press Browse and select the file you would like to upload.
+				</span>
+				<button type="submit" class="btn btn-primary">Upload file</button>
+
+
+				<!-- 	<label for="text-input">Text</label>
+					<input type="text" id="text-input">
+					
+				</ div>-->
+				<h2>Success!</h2>
+				<p>Your upload has successfully completed. Nice work.</p>
+			</div> <!-- end column -->
+
+
+		</div> <!-- end row -->
+	</div> <!-- end container -->
+
 </body>
 </html>
